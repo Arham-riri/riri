@@ -92,52 +92,10 @@
             opacity: 0;
         }
     }
-
-    /* Music start overlay */
-    #musicStartOverlay {
-        position: fixed;
-        top: 0; left: 0; right: 0; bottom: 0;
-        background: rgba(0,0,0,0.7);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 20;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-        flex-direction: column;
-        font-family: 'Comic Sans MS', cursive, sans-serif;
-        user-select: none;
-    }
-
-    #musicStartOverlay button {
-        background: #ff4d6d;
-        padding: 15px 30px;
-        border-radius: 30px;
-        border: none;
-        font-size: 20px;
-        margin-top: 20px;
-        transition: background 0.3s ease;
-    }
-    #musicStartOverlay button:hover {
-        background: #ff1e4d;
-    }
 </style>
 </head>
 
 <body>
-
-<!-- Music start overlay -->
-<div id="musicStartOverlay">
-    <div>Tap to start music 🎶</div>
-    <button onclick="startMusic()">Let's go!</button>
-</div>
-
-<!-- Background Music -->
-<audio id="bgMusic" loop>
-    <source src="perfect.mp3" type="audio/mpeg" />
-    Your browser does not support the audio element.
-</audio>
 
 <div class="card">
 
@@ -244,17 +202,7 @@
             showSlide(5);
         }, 1500);
     }
-
-    // Music control
-    const music = document.getElementById('bgMusic');
-    const overlay = document.getElementById('musicStartOverlay');
-
-    function startMusic() {
-        music.play();
-        overlay.style.display = 'none';
-    }
 </script>
 
 </body>
 </html>
-
